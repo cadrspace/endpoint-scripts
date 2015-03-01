@@ -63,8 +63,7 @@ switch(get_controller()) {
 
     default:
 
-        //switch(@$_GET['format']) {
-        switch(get_action()) {
+        switch(@$_GET['format']) {
 
             case 'json':
 
