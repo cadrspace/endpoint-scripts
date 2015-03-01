@@ -1,23 +1,22 @@
 <IfModule mod_rewrite.c>
 
-Options +FollowSymlinks
-RewriteEngine on
-RewriteBase /
+RewriteEngine	on
 
-#RewriteRule ^status.json$  status.php?format=json [L]
+Options         +FollowSymlinks
+
+RewriteBase	/status/
+
+RewriteRule     ^json$ index.php?format=json [L]
 
 # The following rule tells Apache that if the requested filename
 # exists, simply serve it.
-RewriteCond %{REQUEST_FILENAME} -s [OR]
-RewriteCond %{REQUEST_FILENAME} -l [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^.*$ - [NC,L]
+RewriteCond      %{REQUEST_FILENAME} -s [OR]
+RewriteCond      %{REQUEST_FILENAME} -l [OR]
+RewriteCond      %{REQUEST_FILENAME} -d
+RewriteRule      ^.*$                -  [NC,L]
 
-#RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
-RewriteRule ^(.*)$ index.php [NC,L]
+RewriteRule      ^(.*)$              index.php    [NC,L]
 
-# Make the .git directory inaccessible
-RedirectMatch 404 /\.git.*$
-RedirectMatch 404 /config.json
+RedirectMatch    404                 config.json
 
 </IfModule>
