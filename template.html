@@ -10,12 +10,23 @@
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/spaceapi.js"></script>
 
+    <style type="text/css">
+      #footer {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+
     <script>
         $(document).ready(function(){
 
             // uncomment one of both in order to use either the
             // monster or a simple button to display the status
-            $("#svg4534").fadeIn();
+            $("#svg2").fadeIn();
             //$("#button").fadeIn();
         });
 
@@ -26,7 +37,11 @@
 <h2></h2>
 <div id="button"></div>
 
-{{ monster }}
+{{ alien }}
 
+<div id="footer">
+    <a href="http://www.lisperati.com/logo.html">Lisp Alien</a> that
+    is used on this page was made by Conrad Barski
+</div>
 </body>
 </html>

@@ -211,7 +211,7 @@ function output_html() {
     header('Content-type: text/html; charset=UTF-8');
 
     $template = file_get_contents('template.html');
-    $monster = file_get_contents('img/monster/monster.svg');
+    $alien = file_get_contents('img/alien/lisplogo_alien.svg');
 
     $protocol = ($_SERVER['SERVER_PORT'] === 443 ||
         @$_SERVER['HTTPS'] === 'on' ||
@@ -222,7 +222,7 @@ function output_html() {
         . $_SERVER['REQUEST_URI'];
 
     // substitute template variables
-    $html = str_replace('{{ monster }}', $monster, $template);
+    $html = str_replace('{{ alien }}', $alien, $template);
     $html = str_replace('{{ baseurl }}', $base_url, $html);
 
     // remove comments

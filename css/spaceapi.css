@@ -23,8 +23,8 @@ body {
  *  https://blueprints.launchpad.net/inkscape/+spec/allow-browser-resizing
  *
  */
-#svg4534 {
-    width: 410px;
+#svg2 {
+    width: 600px;
     display: none;
 }
 
@@ -35,7 +35,7 @@ h2 {
     /*letter-spacing: 0.7em;*/
 }
 
-#svg4534, h2 {
+#svg2, h2 {
     transition: all 0.3s ease 0s;
 }
 
@@ -45,7 +45,7 @@ h2 {
         font-size: 30px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 350px;
     }
 
@@ -57,7 +57,7 @@ h2 {
         font-size: 25px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 210px;
     }
 
@@ -69,7 +69,7 @@ h2 {
         font-size: 20px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 150px;
     }
 
@@ -81,7 +81,7 @@ h2 {
         font-size: 18px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 120px;
     }
 
@@ -93,7 +93,7 @@ h2 {
         font-size: 18px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 80px;
     }
 
@@ -105,7 +105,7 @@ h2 {
         font-size: 16px;
     }
 
-    #svg4534 {
+    #svg2 {
         width: 50px;
     }
 
@@ -129,31 +129,21 @@ h2 {
     background: url('/img/button/gray.png') no-repeat;
 }
 
-#circle3371,
-#path3339 {
+#svg2 {
     -webkit-transition: all linear 1s;
     -moz-transition: all linear 1s;
     -o-transition: all linear 1s;
     transition: all linear 1s;
 }
 
-#circle3371.open {
-    fill: #2dd2b8 !important;
-}
-#circle3371.closed {
-    fill: #ff7f00 !important;
-}
-#circle3371.undefined {
-    fill: #00cfff !important;
+#svg2.open {
+    filter: none;
+    -webkit-filter: grayscale(0);
 }
 
+#svg2.closed, #svg2.undefined {
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
 
-#path3339.open {
-    fill: #007f3f !important;
-}
-#path3339.closed {
-    fill: #ec370f !important;
-}
-#path3339.undefined {
-    fill: #0f91ec !important;
-}

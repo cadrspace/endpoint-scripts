@@ -3,7 +3,7 @@ $(document).ready(function($){
     var Application = {
 
         run: function() {
-            this.view = $("#button, #circle3371, #path3339");
+            this.view = $("#svg2");
             this.title = $("h2");
             this.load_status();
         },
