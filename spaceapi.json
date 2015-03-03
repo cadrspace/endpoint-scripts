@@ -1,49 +1,38 @@
 {
-    "api": "0.13",
-    "space": "The space name",
-    "logo": "http://your-space.com/logo.png",
-    "url": "http://example.com",
+    "api":   "0.13",
+    "space": "CADR",
+    "logo":  "http://cadrspace.ru/w/skins/common/images/cadr.png",
+    "url":   "http://cadrspace.ru",
     "location": {
-        "address": "see the documentation",
-        "lon": 5.973817,
-        "lat": 39.240431
+	"address": "aud. 054, b. 6, Studentcheskaya st., Nizhny Novgorod, Russian Federation, 603950",
+	"lon":     43.988235,
+	"lat":     56.302663
     },
     "spacefed": {
-        "spacenet": false,
-        "spacesaml": false,
-        "spacephone": false
+	"spacenet":   false,
+	"spacesaml":  false,
+	"spacephone": false
     },
     "contact": {
-        "twitter": "@example",
-        "email": "e@xample.com",
-        "irc": "irc://irc.freenode.net/example",
-        "ml": "public@lists.example.com",
-        "issue_mail": "ZUB4YW1wbGUuY29tCg=="
+	"twitter":    "@cadrspace",
+	"irc":        "irc://chat.freenode.net/##cadr",
+	"ml":         "cadr-hackerspace@googlegroups.com",
+	"issue_mail": "poptsov.artyom@gmail.com"
     },
+    "cam": [
+        "http://nntc.nnov.ru:58080/?action=stream"
+    ],
     "issue_report_channels": [
-        "issue_mail"
+	"issue_mail",
+        "ml"
     ],
     "state": {
-        "open": null
+	"open": null
     },
     "projects": [
-        "http://github.com/example"
+	"https://github.com/cadrspace"
     ],
     "cache": {
-        "schedule": "m.02"
-    },
-    "sensors": {
-        "temperature": [
-            {
-                "value": null,
-                "unit": "°C",
-                "location": "Roof"
-            },
-            {
-                "value": null,
-                "unit": "°De",
-                "location": "Lab"
-            }
-        ]
+	"schedule": "m.02"
     }
 }
